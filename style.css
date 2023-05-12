@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Odibee Sans', cursive;
+    background-color: #2f4f4f;
+}
+h1 {
+    width: fit-content;
+    margin: auto;
+    color: white;
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+h1 span {
+    color: #ffff00;
+}
+.container {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    border: 3px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+.container span {
+    display: none;
+}
+.container div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    transition: .3s;
+}
+
+.container div:nth-of-type(13) {
+    background: url(images/1.jpg);
+    opacity: 0;
+}
+.container div:nth-of-type(12) {
+    background: url(images/2.jpg);
+    opacity: 0;
+}
+.container div:nth-of-type(11) {
+    background: url(images/3.jpg);
+    opacity: 0;
+}
+.container div:nth-of-type(10) {
+    background: url(images/4.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(9) {
+    background: url(images/5.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(8) {
+    background: url(images/6.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(7) {
+    background: url(images/7.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(6) {
+    background: url(images/8.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(5) {
+    background: url(images/9.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(4) {
+    background: url(images/10.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(3) {
+    background: url(images/11.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(2) {
+    background: url(images/12.jpg);
+    background-size: cover;
+    opacity: 0;
+}
+.container div:nth-of-type(1) {
+    background: url(images/13.jpg);
+    background-size: cover;
+    opacity: 1;
+    z-index: 2;
+}
+
+.container div a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px 0 0 5px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+.container div a:hover {
+    border-color: #ffff00;
+}
+.container div a:first-of-type {
+    left: 20px;
+    transform: rotate(-45deg);
+}
+.container div a:last-of-type {
+    right: 20px;
+    transform: rotate(135deg);
+}
+
+*:target ~ .item-1{
+    opacity: 0 !important;
+}
+#item1:target ~ .item-1{
+    opacity: 1 !important;
+    z-index: 3;
+}
+#item2:target ~ .item-2,
+#item3:target ~ .item-3,
+#item4:target ~ .item-4,
+#item5:target ~ .item-5,
+#item6:target ~ .item-6,
+#item7:target ~ .item-7,
+#item8:target ~ .item-8,
+#item9:target ~ .item-9,
+#item10:target ~ .item-10,
+#item11:target ~ .item-11,
+#item12:target ~ .item-12,
+#item13:target ~ .item-13{
+    opacity: 1;
+    z-index: 3;
+}
+p {
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+}
+p a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
