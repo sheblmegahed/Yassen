@@ -150,17 +150,45 @@ h1 span {
     opacity: 1;
     z-index: 3;
 }
-p {
-    width: 800px;
-    height: 500px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-}
-p a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
+
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 65px;
+    }
+    .container {
+        width: 350px;
+    }
+    .container div a:first-of-type {
+        top: 90%;
+        left: 20%;
+        border-color: tomato;
+        border-width: 8px 0 0 8px;
+    }
+    /* .container div a:first-of-type::before {
+        content: "\f04e";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: tomato;
+        width: 80px;
+        height: 37.5;
+        border-radius: 50%;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-135deg);
+        font-size: 40px;
+        color: orange;
+    } */
+    .container div a:last-of-type {
+        top: 90%;
+        right: 20%;
+        border-color: tomato;
+        border-width: 8px 0 0 8px;
+    }
 }
